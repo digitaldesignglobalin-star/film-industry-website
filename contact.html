@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONTACT</title>
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css-folder/contact.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark fixed-top custom-navbar">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- <a class="navbar-brand" href="./index.html">NINE<span>STUDIO</span></a> -->
+
+
+         <a class="navbar-brand" href="index.html">
+          <img
+            src="assets/logo_2-removebg-preview.png"
+            alt="Sobuj Films & Television Studio Logo"
+            class="navbar-logo"
+          />
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <ul class="desktop-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="./contact.html" class="desktop-contact">Contact</a></li>
+        </ul>
+
+        <!-- HAMBURGER (MOBILE) -->
+        <button class="navbar-toggler hamburger" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- OVERLAY -->
+    <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
+
+    <!-- FULLSCREEN MOBILE MENU -->
+    <nav class="side-nav" id="sideNav">
+      <button class="close-btn" id="closeNav">&times;</button>
+
+      <div class="menu-content">
+        <ul class="menu-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+
+        <a href="./contact.html" class="menu-contact">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- CONTACT HERO – REDESIGNED -->
+      <section class="contact-hero">
+        <div class="contact-hero-overlay"></div>
+
+        <div class="container">
+          <div class="contact-hero-inner">
+            <span class="contact-eyebrow">Contact</span>
+
+            <h1>
+              Let’s create something<br />
+              meaningful together
+            </h1>
+
+            <p>
+              Tell us about your idea, your vision, or your next project. We’re
+              always open to thoughtful collaborations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT FORM – CINEMATIC -->
+      <!-- CONTACT FORM – LIGHT VERSION -->
+      <section class="contact-form-light">
+        <div class="container">
+          <div class="contact-light-grid">
+            <!-- TEXT -->
+            <div class="contact-light-text">
+              <span>Contact</span>
+              <h2>Let’s start a conversation</h2>
+              <p>
+                Have an idea, a story, or a project in mind? Tell us what you’re
+                building and we’ll help shape it into something meaningful.
+              </p>
+            </div>
+
+            <!-- FORM -->
+            <div class="contact-light-form">
+              <form>
+                <div class="input-field">
+                  <label>Your Name</label>
+                  <input type="text" placeholder="John Doe" />
+                </div>
+
+                <div class="input-field">
+                  <label>Email Address</label>
+                  <input type="email" placeholder="you@email.com" />
+                </div>
+
+                <div class="input-field">
+                  <label>Project Details</label>
+                  <textarea
+                    rows="4"
+                    placeholder="Tell us about your project..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="light-submit-btn">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/919999999999?text=Hello%20I%20would%20like%20to%20book%20an%20Ayurveda%20consultation"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <!-- Brand -->
+        <div class="footer-brand-centered">
+          <!-- <a href="index.html" class="footer-logo-link">
+            <h2>NINE<span>STUDIO</span></h2>
+          </a> -->
+
+          <a class="navbar-brand" href="index.html">
+          <img
+            src="assets/logo_2-removebg-preview.png"
+            alt="Sobuj Films & Television Studio Logo"
+            class="footer-logo"
+          />
+        </a>
+
+          <p>
+            A creative film production studio crafting cinematic stories with
+            emotion, precision, and purpose.
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact-centered">
+          <p>
+            Email:
+            <a href="mailto:hello@ninestudio.com">hello@ninestudio.com</a>
+          </p>
+          <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-vimeo-v"></i></a>
+          </div>
+        </div>
+
+        <div class="terms-and-policy">
+          <ul>
+            <li>
+              <a href="terms.html">Terms & Conditions</a>
+            </li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+          <p>© 2025 SOBUJ Studio. All rights reserved.</p>
+          <span
+            >Proudly desiged and developed ❤️ by
+            <a target="_blank" href="https://designglobal.in/"
+              >Design Global Technology</a
+            ></span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js-folder/about.js"></script>
+  </body>
+</html>

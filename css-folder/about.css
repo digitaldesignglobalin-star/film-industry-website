@@ -1,0 +1,1611 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Gilroy';
+}
+
+html, body {
+height: 100%;
+width: 100%;
+}
+
+
+:root {
+    --primary-color: #d40203;
+    --dark-color: #0a0a0a;
+    --light-color: #f8f9fa;
+    --text-color: #777;
+    --heading-color: #222;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--heading-color);
+    font-weight: 600;
+}
+/* =========================
+   NAVBAR
+========================= */
+
+.custom-navbar {
+  height: 80px;
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff !important;
+}
+
+.navbar-brand span {
+  color: var(--primary-color);
+}
+
+/* =========================
+   DESKTOP MENU
+========================= */
+
+.desktop-menu {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.3s;
+}
+
+.desktop-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.desktop-menu li a:hover::after {
+  width: 100%;
+}
+
+.desktop-menu li a:hover {
+  color: var(--primary-color);
+}
+
+.desktop-contact {
+  padding: 8px 22px;
+  border: 1px solid var(--primary-color);
+}
+
+.desktop-contact:hover {
+  background: var(--primary-color);
+  color: #fff !important;
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.hamburger {
+  width: 28px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  height: 2px;
+  background: #fff;
+  transition: 0.4s;
+}
+
+/* =========================
+   FULLSCREEN MOBILE MENU
+========================= */
+
+.side-nav {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  transform: translateX(100%);
+  transition: 0.45s ease;
+  z-index: 1050;
+}
+
+.side-nav.active {
+  transform: translateX(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: none;
+  border: none;
+  font-size: 38px;
+  color: #fff;
+}
+
+.menu-content {
+  height: auto;
+  padding: 120px 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-links {
+  list-style: none;
+}
+
+/* .menu-links li {
+  margin-bottom: 32px;
+} */
+
+.menu-links a {
+  font-size: 27px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-links a:hover {
+  color: var(--primary-color);
+}
+
+.menu-contact {
+  padding: 14px 0px;
+  border: 2px solid var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  width: 50%;
+    text-align: center;
+  transition: all 0.35s ease;
+
+}
+
+.menu-contact:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.offcanvas-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1040;
+}
+
+.offcanvas-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 991px) {
+  .desktop-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+
+/* Navbar Logo */
+.navbar-logo {
+  height: 56px;        /* adjust if needed */
+  width: auto;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   ABOUT HERO – REDESIGNED
+========================= */
+
+.about-hero {
+  position: relative;
+  /* min-height: 85vh; */
+    height: 100vh;
+
+   /* BACKGROUND IMAGE */
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.05)
+    ),
+    url("../assets/about-banner.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Subtle grain / depth overlay */
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.2)
+  );
+  z-index: 1;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Eyebrow */
+.about-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: var(--primary-color);
+  margin-bottom: 22px;
+}
+
+/* Heading */
+.about-hero h1 {
+  font-size: 56px;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 26px;
+}
+
+/* Divider */
+.hero-divider {
+  width: 80px;
+  height: 2px;
+  background: var(--primary-color);
+  margin: 0 auto 26px;
+}
+
+/* Paragraph */
+.about-hero p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .about-hero h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero {
+    min-height: 75vh;
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+  .about-hero p {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   OUR STORY – CINEMATIC
+========================= */
+
+.story-cinematic {
+  background: #c5a47e3d;
+  padding: 30px 0;
+}
+
+.story-intro {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.story-eyebrow {
+  display: inline-block;
+  color: var(--primary-color);
+  letter-spacing: 4px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.story-intro h2 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+/* Layout */
+.story-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Text */
+/* .story-text .lead {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.story-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 20px;
+} */
+
+
+
+
+.about-text-unique {
+  max-width: 860px;
+  position: relative;
+  padding-left: 40px;
+}
+
+/* vertical accent line */
+.about-text-unique::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #e50914, transparent);
+}
+
+/* heading spacing */
+.about-text-unique h2 {
+  margin-bottom: 28px;
+}
+
+/* lead paragraph */
+.about-text-unique .lead {
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--heading-color);
+  margin-bottom: 22px;
+}
+
+/* normal paragraphs */
+.about-text-unique p {
+  font-size: 16px;
+  line-height: 1.8;
+    color: var(--heading-color);
+
+  margin-bottom: 20px;
+}
+
+/* last paragraph spacing */
+.about-text-unique p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/* Image */
+.story-visual img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .story-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .story-visual img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 576px) {
+  .story-intro h2 {
+    font-size: 32px;
+  }
+
+  .story-text .lead {
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+/* ==========sobuj art and film academy section ========== */
+
+/* ==============================
+   SAFA ABOUT SECTION
+================================ */
+
+.safa-about-section {
+  padding: 80px 0;
+  background-color: #0e0e0e;
+  color: #fff;
+}
+
+.safa-about-content {
+  background: #121212;
+  padding: 50px;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+/* Section hover lift */
+.safa-about-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.safa-about-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #DAD9DD;
+}
+
+.safa-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.safa-about-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #ccc;
+}
+
+.safa-about-content h4 {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #DAD9DD;
+
+}
+
+/* ==============================
+   COURSES GRID
+================================ */
+
+.safa-courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+
+.safa-courses li {
+  list-style: none;
+  background: #1a1a1a;
+  padding: 12px 16px;
+  /* border-left: 3px solid #C5A47E; */
+  border-left: 3px solid var(--primary-color);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Hover animation for courses */
+.safa-courses li:hover {
+  transform: translateX(6px);
+  /* background: #C5A47E; */
+  background: var(--primary-color);
+  color: #fff;
+  /* box-shadow: 0 10px 20px rgba(201, 169, 110, 0.4); */
+  box-shadow: 0 10px 20px rgba(212, 2, 3, 0.4);
+}
+
+
+
+/* ==============================
+   HIGHLIGHT BOX
+================================ */
+
+.safa-highlight {
+  background: #151515;
+  padding: 22px;
+  border-radius: 8px;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.safa-highlight:hover {
+  background: #1f1f1f;
+  /* box-shadow: inset 0 0 0 1px rgba(201, 169, 110, 0.5); */
+  box-shadow: inset 0 0 0 1px rgba(212, 2, 3, 0.5);
+
+}
+
+/* ==============================
+   QUOTE EFFECT
+================================ */
+
+.safa-quote {
+  margin-top: 35px;
+  font-style: italic;
+  font-size: 17px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+/* underline animation */
+.safa-quote::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  /* background: #C5A47E; */
+  background: var(--primary-color);
+  transition: width 0.4s ease;
+}
+
+.safa-quote:hover::after {
+  width: 100%;
+}
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .safa-about-content {
+    padding: 30px;
+  }
+
+  .safa-about-content h2 {
+    font-size: 28px;
+  }
+}
+
+
+
+
+
+
+
+/* =========================
+   WHAT WE BELIEVE – CLEAN
+========================= */
+
+.beliefs-clean {
+  background: #ffffff;
+  padding: 30px 0;
+}
+
+.museum-header {
+  max-width: 720px;
+  margin: 0 auto 80px; /* centered + reduced spacing */
+  text-align: center;
+}
+
+.museum-header span {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.museum-header h2 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+/* ROW LAYOUT */
+.belief-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+/* NUMBER */
+.belief-number {
+  font-size: 14px;
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+/* TEXT */
+.belief-text h3 {
+  font-size: 26px;
+  margin-bottom: 14px;
+  font-family: "Playfair Display", serif;
+}
+
+.belief-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 480px;
+}
+
+/* IMAGE FRAME (EQUAL SIZE – BULLETPROOF) */
+.belief-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.belief-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* display: block; */
+  border-radius: 10px;
+  transition: transform 0.6s ease;
+
+}
+
+
+/* HOVER EFFECT */
+.belief-row:hover .belief-image img {
+  transform: scale(1.06);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .belief-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .belief-image {
+    height: 260px;
+  }
+
+  .belief-number {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .beliefs-clean {
+    /* padding: 40px 0; */
+  }
+
+  .belief-text h3 {
+    font-size: 22px;
+  }
+
+  .belief-text p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   SAFA INDUSTRY PATH – LIGHT THEME
+================================ */
+
+.safa-path-section {
+  padding: 50px 0;
+  background: #f9f9f9;
+  color: #1a1a1a;
+}
+
+.safa-path-header span {
+  color: #d40203;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.safa-path-header h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 15px 0;
+  color: #111;
+}
+
+.safa-path-header p {
+  max-width: 750px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+/* Timeline */
+.safa-path {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.safa-path::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #d40203,
+    transparent
+  );
+  transform: translateX(-50%);
+  
+}
+
+/* Steps */
+.safa-step {
+  width: 50%;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.safa-step.left {
+  left: 0;
+  text-align: right;
+}
+
+.safa-step.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Content Box */
+.safa-step .content {
+  background: #ffffff;
+  padding: 30px 34px;
+  border-radius: 14px;
+  border: 1px solid #e8e8e8;
+  transition: all 0.35s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.safa-step .content:hover {
+  transform: translateY(-8px);
+  border-color: #d40203;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); */
+    box-shadow: 0 10px 30px rgba(212, 2, 3, 0.6);
+}
+
+/* Text */
+.safa-step h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.safa-step p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Footer */
+.safa-path-footer {
+  margin-top: 40px;
+}
+
+.safa-path-footer p {
+  font-size: 20px;
+  color: #222;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .safa-path::before {
+    left: 0;
+  }
+
+  .safa-step,
+  .safa-step.left,
+  .safa-step.right {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*====================== OUR MISSION====================== */
+.mission-section {
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+.mission-subtitle {
+  /* color: #bfa76f; */
+  color: var(--primary-color);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.mission-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #DAD9DD;
+}
+
+.mission-intro {
+  color: #cfcfcf;
+  font-size: 1rem;
+}
+
+.mission-card {
+  background: #1a1a1a;
+  padding: 25px;
+  height: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card h5 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.mission-card p {
+  color: #bdbdbd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); */
+  box-shadow: 0 10px 30px rgba(212, 2, 3, 0.6);
+
+}
+
+.mission-commitment {
+  color: #d5d5d5;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <!-- Why Choose Us Section --> */
+
+
+.why-choose-animated {
+  background: linear-gradient(180deg, #ffffff, #f3f3f3);
+  position: relative;
+}
+
+.animated-tag {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  /* added extra */
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+}
+
+.animated-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.animated-intro {
+  color: #555;
+  max-width: 720px;
+}
+
+.why-line {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  /* background: linear-gradient(to bottom, transparent, #bfa76f, transparent); */
+  background: linear-gradient(to bottom, transparent, #d40203, transparent);
+}
+
+.why-point {
+  position: relative;
+  display: flex;
+  gap: 25px;
+  padding: 30px 0 30px 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.why-point:nth-child(2) { animation-delay: 0.1s; }
+.why-point:nth-child(3) { animation-delay: 0.2s; }
+.why-point:nth-child(4) { animation-delay: 0.3s; }
+.why-point:nth-child(5) { animation-delay: 0.4s; }
+.why-point:nth-child(6) { animation-delay: 0.5s; }
+.why-point:nth-child(7) { animation-delay: 0.6s; }
+
+.why-point span {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+  /* color: #bfa76f; */
+  color: var(--primary-color);
+
+  opacity: 0.25;
+  transition: all 0.3s ease;
+}
+
+.why-point h5 {
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.why-point p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.why-point:hover span {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.why-point:hover h5 {
+  /* color: #bfa76f; */
+  color: var(--primary-color);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* <!-- SFTS Casting House Section --> */
+.casting-channel-showcase {
+  background: linear-gradient(180deg, #ffffff, #f4f4f4);
+}
+
+/* General */
+.casting-tag {
+  /* font-size: 0.75rem;000 */
+  letter-spacing: 2px;
+  /* color: #bfa76f; */
+  color: var(--primary-color);
+}
+
+.casting-title {
+  font-weight: 800;
+  margin: 10px 0 15px;
+}
+
+.casting-intro {
+  color: #555;
+  max-width: 780px;
+  line-height: 1.7;
+}
+
+/* Channel Block */
+.channel-block {
+  margin-top: 40px;
+  padding: 40px;
+  background: #111;
+  border-radius: 24px;
+  color: #fff;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+
+/* Channel Header */
+.channel-header {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.channel-label {
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  /* color: #bfa76f; */
+  color: var(--primary-color);
+}
+
+.channel-name {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+.channel-desc {
+  color: #ccc;
+}
+
+/* Serial Rows */
+.serial-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  transition: transform 0.4s ease;
+}
+
+.serial-row:last-child {
+  border-bottom: none;
+}
+
+.serial-row:hover {
+  transform: translateX(8px);
+}
+
+/* Left */
+.serial-left h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #535353;
+}
+
+.serial-type {
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+/* Right */
+.serial-right {
+  text-align: right;
+}
+
+.role-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  /* background: rgba(191, 167, 111, 0.2); */
+  background: rgba(212, 2, 3, 0.2);
+  /* color: #bfa76f; */
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.serial-right p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #eee;
+}
+
+/* Conclusion */
+.casting-conclusion {
+  color: #444;
+  /* max-width: 780px; */
+  line-height: 1.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   OUR CULTURE – REDESIGN
+========================= */
+
+.culture-section {
+  background: #f7f7f7;
+  padding: 30px 0;
+}
+
+/* Header */
+.culture-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.culture-header span {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.culture-header h2 {
+  font-size: 42px;
+}
+
+/* Grid */
+.culture-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* Image */
+.culture-image {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.culture-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text */
+.culture-lead {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.culture-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 18px;
+  max-width: 460px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .culture-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .culture-image {
+    height: 320px;
+  }
+
+  .culture-text p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .culture-section {
+    /* padding: 80px 0; */
+  }
+
+  .culture-header h2 {
+    font-size: 32px;
+  }
+
+  .culture-lead {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   ABOUT CTA
+========================= */
+
+.about-cta {
+  background: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.about-cta p {
+  font-size: 18px;
+  color: #555;
+  max-width: 720px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.about-cta .cta-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  border: 2px solid var(--primary-color);
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+}
+
+.about-cta .cta-btn:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(197,164,126,0.25);
+  color: #fff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .beliefs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero h1 {
+    font-size: 34px;
+  }
+
+  .about-cta h2 {
+    font-size: 32px;
+  }
+
+  .beliefs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   STACKED FOOTER
+========================= */
+
+.site-footer {
+  background: #0a0a0a;
+  color: #bbb;
+  padding: 30px 0 10px;
+  text-align: center;
+}
+
+/* Brand block */
+.footer-brand-centered {
+  max-width: 720px;
+  margin: 0 auto 15px;
+}
+
+.footer-brand-centered h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-brand-centered h2 span {
+  color: var(--primary-color);
+}
+
+.footer-brand-centered p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #aaa;
+}
+
+/* Contact block */
+.footer-contact-centered p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-contact-centered a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-centered a:hover {
+  color: var(--primary-color);
+}
+
+/* Socials */
+.footer-socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.footer-socials a {
+  color: #bbb;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  margin-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 20px;
+}
+
+.footer-bottom span {
+  font-size: 13px;
+  color: #777;
+
+}
+
+.footer-bottom span a {
+  text-decoration: none;
+  color: #777;
+
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 30px 20px 30px;
+  }
+
+  .footer-brand-centered h2 {
+    font-size: 32px;
+  }
+
+  .footer-brand-centered p {
+    font-size: 15px;
+  }
+}
+
+
+.footer-logo-link {
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* keeps your logo color */
+}
+
+
+.footer-logo {
+  height: 56px;        /* adjust if needed */
+  width: auto;
+  /* display: block; */
+  margin-bottom: 10px;
+}
+
+.terms-and-policy ul{
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  gap: 22px;
+  list-style: none;
+
+}
+
+.terms-and-policy a {
+  text-decoration: none;
+  color: #777;
+      font-size: 13px;
+
+}
+
+
+/* === FLOATING WHATSAPP BUTTON === */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  /* background: rgb(201,169,110); */
+  background: rgb(212, 2, 3);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 10px 25px rgba(212, 2, 3, 0.45);
+  transition: all 0.3s ease;
+  animation: whatsapp-pulse 2.5s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(201,169,110, 0.6);
+}
+
+/* Pulse Effect */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 2, 3, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
