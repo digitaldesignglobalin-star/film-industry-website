@@ -1,3 +1,14 @@
+// Smooth scroll 
+// -------- BUTTERY SMOOTH SCROLL (FINAL) --------
+
+
+
+
+
+
+
+
+
 const menuToggle = document.getElementById('menuToggle');
   const sideNav = document.getElementById('sideNav');
   const overlay = document.getElementById('offcanvasOverlay');
