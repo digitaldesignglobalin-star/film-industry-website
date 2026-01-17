@@ -126,10 +126,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .side-nav {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;                 /* ⭐ anchor to right */
+  height: 100vh;
+  width: 66vw;              /* ⭐ 66% width */
   background: #0a0a0a;
   transform: translateX(100%);
-  transition: 0.45s ease;
+  transition: transform 0.45s ease;
   z-index: 1050;
 }
 
