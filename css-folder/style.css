@@ -267,9 +267,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-subtitle {
-    color: var(--primary-color);
+    color: var(--light-color);
+    font-family: sans-serif;
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -321,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary-custom {
     background-color: transparent;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--light-color);
     color: white;
 }
 
